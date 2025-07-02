@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🗑️ Delete Your Order</h2>
+        <form method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <button type="submit">Delete My Order</button>
+        </form>
+
+        {% if deleted == True %}
+            <p style="color: green;">✅ Your order has been deleted.</p>
+        {% elif deleted == False %}
+            <p style="color: red;">❌ No matching order found.</p>
+        {% endif %}
+
+        <a href="/" class="secondary-link">← Back to Home</a>
+    </div>
+</body>
+</html>

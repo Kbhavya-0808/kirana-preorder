@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kirana Pre-Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Place Your Kirana Order</h2>
+        <form method="post" action="/submit">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <textarea name="items" placeholder="List your items here..." required></textarea>
+            <button type="submit">Submit Order</button>
+        </form>
+        <a href="/check" class="secondary-link">Check Order Status</a>
+        <a href="/delete" class="secondary-link">🗑️ Delete My Order</a>
+
+    </div>
+</body>
+</html>

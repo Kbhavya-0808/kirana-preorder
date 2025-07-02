@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Check Your Order Status</h2>
+        <form method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <button type="submit">Check</button>
+        </form>
+    </div>
+</body>
+</html>

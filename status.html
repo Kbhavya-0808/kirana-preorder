@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if not_found %}
+            <p>No order found. Please check your details.</p>
+        {% else %}
+            <h2>Your Order Status</h2>
+            <p><strong>Items:</strong><br>{{ items }}</p>
+            <p><strong>Status:</strong> <span class="status {{ status|lower }}">{{ status }}</span></p>
+            {% if amount %}
+                <p><strong>Total Amount:</strong> ₹{{ amount }}</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
